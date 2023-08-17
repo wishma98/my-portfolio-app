@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import { useEffect, useState } from "react";
 import About from "@/components/About";
+import "animate.css";
+import Skills from "@/components/Skills";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,14 +30,14 @@ export default function Home() {
       }
     >
       <Head>
-        <title>Wishma's portfolio'</title>
+        <title>Wishma's portfolio</title>
       </Head>
       {/* header */}
       <section
         id="home"
         className={`snap-start ${
           !isScroller
-            ? "pb-4 fixed bg-[rgb(36,36,36)]/[.95] top-0 left-0 right-5 z-50 shadow-fill-dropdown-hover"
+            ? "pb-4 fixed bg-[rgb(36,36,36)]/[.95] top-0 left-0 right-5 z-40 shadow-fill-dropdown-hover"
             : "snap-start"
         }`}
       >
@@ -43,19 +45,22 @@ export default function Home() {
       </section>
 
       {/* hero */}
-      <section id="hero" className={"snap-start mt-40"}>
+      <section id="hero" className={"snap-start"}>
         <Hero />
       </section>
 
       {/* about */}
-      <section id="about" className={"snap-center h-screen pt-36"}>
+      <section id="about" className={"snap-center"}>
         <About />
       </section>
 
-      {/* expirience */}
+      {/* skills */}
+      <section id="skills" className={"snap-center"}>
+        <Skills />
+      </section>
 
       {/* footer */}
-      <section id="contact" className={"snap-end h-screen pt-36"}>
+      <section id="contact" className={"snap-end"}>
         <Footer />
       </section>
     </div>

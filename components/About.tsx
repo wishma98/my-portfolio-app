@@ -1,40 +1,149 @@
 import Image from "next/image";
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import { SocialIcon } from "react-social-icons";
 
 type Props = {};
 
 const About = (props: Props) => {
   const [text, count] = useTypewriter({
     words: ["<About/>"],
-    loop: true,
-    typeSpeed: 400,
-    delaySpeed: 3500,
+    typeSpeed: 800,
   });
   return (
-    <div className={"sticky justify-start flex flex-col"}>
-      <h1 className={"font-montserrat font-bold text-3xl h-12 ml-20"}>
-        {text}
-      </h1>
-      <div className={"mt-16 ml-28 flex flex-row items-start justify-between"}>
-        <p className={"font-roboto font-normal text-18px max-w-lg"}>
-          "Welcome to my portfolio! I'm a passionate frontend developer with a
-          love for creating visually stunning and user-friendly web experiences.
-          Through my diverse projects showcased here, you'll find a showcase of
-          my skills in HTML, CSS, JavaScript, and various frontend frameworks.
-          From responsive designs to interactive interfaces, each project
-          demonstrates my dedication to crafting seamless, engaging websites.
-          Let's collaborate and bring your ideas to life!"
-        </p>
-        <Image
-          src={require("@/public/my-art.png")}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className={" h-screen sticky justify-around items-center flex flex-col"}
+    >
+      <h3
+        className={
+          "absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 2xl font-montserrat font-bold text-3xl h-12 lg:ml-0 max-lg:ml-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center"
+        }
+      >
+        About
+      </h3>
+      <div
+        className={
+          " flex flex-col items-start lg:flex-row lg:justify-between max-lg:flex-row max-lg:justify-between sm:flex-col-reverse sm:justify-center max-sm:flex-col-reverse sm:mt-36 max-sm:mt-36 max-sm:justify-center md:flex-col-reverse md:justify-center"
+        }
+      >
+        <motion.div
+          initial={{
+            x: -200,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
           className={
-            " w-[570px] h-[570px] -mt-28 rotate-[-2deg] rounded-[64px] object-cover"
+            "mt-16 ml-28 lg:ml-16 max-lg:ml-16 max-md:ml-16 sm:ml-0 sm:px-5 md:ml-0 md:px-6 max-sm:ml-0 max-sm:px-5"
           }
-          alt=""
-        />
+        >
+          <p
+            className={
+              "font-roboto font-normal text-18px max-w-lg lg:text-18px lg:text-start max-lg:text-18px max-lg:text-start max-md:text-18px max-md:text-start sm:text-12px sm:text-center md:text-[14px] md:text-center max-sm:text-12px max-sm:text-center"
+            }
+          >
+            "Welcome to my portfolio! I'm a passionate frontend developer with a
+            love for creating visually stunning and user-friendly web
+            experiences. Through my diverse projects showcased here, you'll find
+            a showcase of my skills in HTML, CSS, JavaScript, and various
+            frontend frameworks. From responsive designs to interactive
+            interfaces, each project demonstrates my dedication to crafting
+            seamless, engaging websites. Let's collaborate and bring your ideas
+            to life!"
+          </p>
+        </motion.div>
+        <div
+          className={
+            "mt-6  lg:mt-10 max-lg:mt-0 sm:-mt-5 sm:mx-auto sm:mb-7 max-sm:mb-7 max-sm:mx-auto max-sm:-mt-7 md:-mt-5 md:mx-auto"
+          }
+        >
+          <motion.img
+            initial={{
+              x: 200,
+              opacity: 0,
+            }}
+            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            src="https://keepbookadmin.s3.amazonaws.com/64ddd36d3ea3a2ea147c22ba.jpg"
+            className={
+              "w-[570px] h-auto bg-slate-700/30 sm:w-[200px] border-6 border-solid border-white/50 pt-4 pl-4 pr-0 pb-0 rounded-full max-sm:w-[200px] md:w-[230px] rotate-[-2deg] object-cover"
+            }
+          />
+        </div>
       </div>
-    </div>
+      <div className={"flex flex-row gap-5 ml-8 border-t border-b py-4 px-3"}>
+        <motion.div
+          initial={{
+            y: -10,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <SocialIcon
+            url="https://www.github.com/wishma98"
+            fgColor="gray"
+            bgColor="black"
+            title="Github"
+            className={"rounded-full hover:shadow-icon"}
+          />
+        </motion.div>
+        <motion.div
+          initial={{
+            y: -20,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <SocialIcon
+            url="https://www.linkedin.com/in/wishma-gamlath-315501242"
+            fgColor="gray"
+            bgColor="black"
+            title="Linkedin"
+            className={"rounded-full hover:shadow-icon"}
+          />
+        </motion.div>
+        <motion.div
+          initial={{
+            y: -30,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <SocialIcon
+            url="https://wa.me/+94778899593"
+            fgColor="gray"
+            bgColor="black"
+            title="Whatsapp"
+            network="whatsapp"
+            className={" rounded-full hover:shadow-icon"}
+          />
+        </motion.div>
+        <motion.div
+          initial={{
+            y: -40,
+            opacity: 0,
+          }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <SocialIcon
+            url="https://mailto:kckwishma26@gmail.com"
+            fgColor="gray"
+            bgColor="black"
+            title="Email"
+            network="email"
+            className={" rounded-full hover:shadow-icon"}
+          />
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };
 

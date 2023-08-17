@@ -5,8 +5,53 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
+      keyframes: {
+        wave: {
+          "0%": {
+            width: "230px",
+            height: "210px",
+            transform: "rotate(0.0deg)",
+          },
+          "10%": {
+            width: "200px",
+            height: "170px",
+            transform: "rotate(14deg)",
+          },
+          "20%": {
+            width: "230px",
+            height: "200px",
+            transform: "rotate(-8deg)",
+          },
+          "30%": {
+            width: "200px",
+            height: "190px",
+            transform: "rotate(14deg)",
+          },
+          "40%": {
+            width: "230px",
+            height: "210px",
+            transform: "rotate(-4deg)",
+          },
+          "50%": {
+            width: "200px",
+            height: "220px",
+            transform: "rotate(10.0deg)",
+          },
+          "60%": {
+            width: "230px",
+            height: "238px",
+            transform: "rotate(0.0deg)",
+          },
+          "100%": {
+            width: "210px",
+            height: "170px",
+            transform: "rotate(0.0deg)",
+          },
+        },
+      },
       colors: {
         brand: {
           DEFAULT: "#2210AA",
@@ -153,6 +198,24 @@ module.exports = {
         ping: "ping 3s linear infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
         pulse: "pulse 1.5s infinite",
+        bounce: "bounce 1.5s 1s",
+        wave: "wave 5s linear infinite",
+      },
+      screens: {
+        sm: "380px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
       },
       boxShadow: {
         headerFixed: "0px 41px 46px rgba(0, 0, 0, 1)",

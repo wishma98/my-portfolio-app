@@ -4,7 +4,7 @@ type Props = {};
 
 const BackgroundCircles = (props: Props) => {
   return (
-    <div className={"relative flex justify-center items-center"}>
+    <div className={"relative flex justify-center items-center -mt-14"}>
       <div
         className={
           "border border-[#333333] rounded-full h-[200px] w-[200px] mt-[-400px] animate-ping"
@@ -22,7 +22,7 @@ const BackgroundCircles = (props: Props) => {
       />
       <div
         className={
-          "rounded-full border border-[#F7AB0A] opacity-20 w-[650px] h-[650px] absolute mt-[-400px] animate-pulse "
+          "rounded-full border border-cyan-600 opacity-20 w-[650px] h-[650px] absolute mt-[-400px] "
         }
       />
       <div

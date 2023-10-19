@@ -60,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* footer */}
-      <section id="contact" className={"snap-end"}>
+      <section id="contact" className={"snap-end sm-x:snap-end"}>
         <Footer />
       </section>
     </div>

@@ -19,7 +19,7 @@ export default function Skills({}: Props) {
     >
       <h3
         className={
-          "absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 font-montserrat font-bold text-2xl h-12 lg:ml-0 max-lg:ml-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center"
+          "absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 font-montserrat font-bold text-3xl h-12 lg:ml-0 max-lg:ml-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center"
         }
       >
         Skills
@@ -39,7 +39,8 @@ export default function Skills({}: Props) {
         />
         <SkillBox
           yPosition={-80}
-          imgUrl="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+          imgUrl="https://res.cloudinary.com/practicaldev/image/fetch/s--kHG8XKTN--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/i/jk9yucs4pqv4uutlvuzb.png"
+          className={" w-10 h-10"}
         />
         <SkillBox
           yPosition={-20}

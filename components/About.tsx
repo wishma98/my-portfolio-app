@@ -20,14 +20,14 @@ const About = (props: Props) => {
     >
       <h3
         className={
-          "absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 2xl font-montserrat font-bold text-3xl h-12 lg:ml-0 max-lg:ml-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center"
+          "absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 font-montserrat font-bold text-3xl h-12 lg:ml-0 max-lg:ml-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center"
         }
       >
         About
       </h3>
       <div
         className={
-          " flex flex-col items-start lg:flex-row lg:justify-between max-lg:flex-row max-lg:justify-between sm:flex-col-reverse sm:justify-center max-sm:flex-col-reverse sm:mt-36 max-sm:mt-36 max-sm:justify-center md:flex-col-reverse md:justify-center"
+          " flex flex-col items-start lg:flex-row lg:justify-between max-lg:flex-row max-lg:justify-between sm:flex-col-reverse sm:justify-center sm-x:justify-center sm-x:mx-auto max-sm:flex-col-reverse sm:mt-36 sm-x:mt-24 max-sm:mt-36 max-sm:justify-center md:flex-col-reverse md:justify-center"
         }
       >
         <motion.div
@@ -38,7 +38,7 @@ const About = (props: Props) => {
           transition={{ duration: 1 }}
           whileInView={{ opacity: 1, x: 0 }}
           className={
-            "mt-16 ml-28 lg:ml-16 max-lg:ml-16 max-md:ml-16 sm:ml-0 sm:px-5 md:ml-0 md:px-6 max-sm:ml-0 max-sm:px-5"
+            "mt-16 ml-28 lg:ml-16 max-lg:ml-16 sm-x:mt-5 max-md:ml-16 sm:ml-0 sm:px-5 md:ml-0 md:px-6 max-sm:ml-0 max-sm:px-5"
           }
         >
           <p
@@ -58,7 +58,7 @@ const About = (props: Props) => {
         </motion.div>
         <div
           className={
-            "mt-6  lg:mt-10 max-lg:mt-0 sm:-mt-5 sm:mx-auto sm:mb-7 max-sm:mb-7 max-sm:mx-auto max-sm:-mt-7 md:-mt-5 md:mx-auto"
+            "mt-6 lg:mt-5 max-lg:mt-0 sm:-mt-0 sm:mx-auto sm:mb-7 sm-x:mb-0 sm-x:mt-7 max-sm:mb-7 max-sm:mx-auto max-sm:-mt-7 md:-mt-5 md:mx-auto"
           }
         >
           <motion.img
@@ -68,14 +68,19 @@ const About = (props: Props) => {
             }}
             transition={{ duration: 1 }}
             whileInView={{ opacity: 1, x: 0 }}
-            src="https://keepbookadmin.s3.amazonaws.com/64ddd36d3ea3a2ea147c22ba.jpg"
+            // src="https://keepbookadmin.s3.amazonaws.com/6530f5caf91ec52b592ca9b1.jpg"
+            src="https://keepbookadmin.s3.amazonaws.com/6530f85af91ec52b592ca9b3.jpg"
             className={
-              "w-[570px] h-auto bg-slate-700/30 sm:w-[200px] border-6 border-solid border-white/50 pt-4 pl-4 pr-0 pb-0 rounded-full max-sm:w-[200px] md:w-[230px] rotate-[-2deg] object-cover"
+              "w-[570px] h-auto bg-slate-700/30 sm:w-[200px] border-6 border-solid border-white/50 p-0 rounded-full max-sm:w-[200px] md:w-[230px] rotate-[-2deg] object-cover"
             }
           />
         </div>
       </div>
-      <div className={"flex flex-row gap-5 ml-8 border-t border-b py-4 px-3"}>
+      <div
+        className={
+          "flex flex-row gap-5 ml-8 sm-x:ml-0 border-t sm-x:-mt-20 border-b py-4 px-3"
+        }
+      >
         <motion.div
           initial={{
             y: -10,

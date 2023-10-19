@@ -202,6 +202,9 @@ module.exports = {
         wave: "wave 5s linear infinite",
       },
       screens: {
+        "sm-x": "280px",
+        // => @media (min-width: 280px) { ... }
+
         sm: "380px",
         // => @media (min-width: 640px) { ... }
 

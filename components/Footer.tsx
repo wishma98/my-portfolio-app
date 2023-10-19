@@ -31,53 +31,77 @@ export default function Footer({}: Props) {
       <div className={"mt-44 w-auto"}>
         <h3
           className={
-            " absolute top-24 uppercase tracking-[20px] pl-10 text-gray-500 2xl font-montserrat font-bold text-3xl h-12 lg:ml-12 max-lg:ml-12 xl:ml-12 md:ml-12 max-md:ml-12 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center sm:pl-0 sm:-ml-4"
+            " -mt-24 uppercase tracking-[20px] pl-10 text-gray-500 font-montserrat font-bold text-3xl h-12 lg:ml-12 max-lg:ml-12 xl:ml-12 md:ml-12 max-md:ml-12 sm-x:pl-0 sm:mx-auto max-sm:mx-auto md:mx-auto lg:text-start max-lg:text-start max-md:text-start sm:text-center md:text-center max-sm:text-center sm:pl-0 sm:ml-5"
           }
         >
           Contact me
         </h3>
-        <div className={"flex flex-col space-y-10"}>
-          <h4 className={"text-3xl font-semibold text-center font-roboto mt-5"}>
+        <div
+          className={
+            "flex flex-col sm:mt-20 space-y-10 xl:space-y-10 lg:space-y-10"
+          }
+        >
+          <h4
+            className={
+              "text-xl lg:text-3xl xl:text-3xl font-semibold text-center sm:ml-2 font-roboto mt-5"
+            }
+          >
             I have just what you need.{" "}
             <span className={"decoration-[#F7AB0A]/50 underline"}>
               Lets Talk.
             </span>
           </h4>
-          <div className={"space-y-10"}>
+          <div className={"space-y-10 xl:space-y-10 lg:space-y-10"}>
             <div
               className={"flex flex-row items-center space-x-5 justify-center"}
             >
-              <div className={"text-[#F7AB0A] text-[24px] animate-pulse "}>
+              <div
+                className={
+                  "text-[#F7AB0A] text-[16px] lg:text-[24px] xl:text-[24px] animate-pulse "
+                }
+              >
                 {GetIconByName("phone")}
               </div>
-              <p className={"text-2xl text-white"}>+94778899593</p>
+              <p className={"text-lg lg:text-2xl xl:text-2xl text-white"}>
+                +94778899593
+              </p>
             </div>{" "}
             <div
               className={"flex flex-row items-center space-x-5 justify-center"}
             >
-              <div className={"text-[#F7AB0A] text-[24px] animate-pulse "}>
+              <div
+                className={
+                  "text-[#F7AB0A] text-[16px] lg:text-[24px] xl:text-[24px] animate-pulse "
+                }
+              >
                 {GetIconByName("email")}
               </div>
-              <p className={"text-2xl text-white"}>kckwishma26@gmail.com</p>
+              <p className={"text-2xl lg:text-2xl xl:text-2xl text-white"}>
+                kckwishma26@gmail.com
+              </p>
             </div>
           </div>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className={
-              "flex flex-col space-y-2 mx-auto sm:w-auto w-fit min-w-fit"
+              "flex flex-col space-y-2 mx-auto sm:w-auto sm-x:w-auto w-fit min-w-fit"
             }
           >
-            <div className={"flex space-x-2"}>
+            <div
+              className={
+                "flex sm-x:flex-col lg:space-y-0 lg:space-x-2 xl:space-y-0 xl:space-x-2 sm-x:space-x-0 sm-x:space-y-2 lg:flex-row xl:flex-row "
+              }
+            >
               <input
                 {...register("name")}
                 placeholder="Name"
-                className={"contactinput sm:w-36 lg:w-full "}
+                className={"contactinput sm:w-full sm-x:w-full lg:w-full "}
                 type="text"
               />
               <input
                 {...register("email")}
                 placeholder="Email"
-                className={"contactinput sm:w-36 lg:w-full "}
+                className={"contactinput sm:w-full sm-x:w-full lg:w-full "}
                 type="email"
               />
             </div>
@@ -95,7 +119,7 @@ export default function Footer({}: Props) {
             <button
               type="submit"
               className={
-                "bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg hover:bg-[#F7AB0A]/40 hover:text-white cursor-pointer"
+                "bg-[#F7AB0A] py-5 px-10 sm:py-3 sm-x:py-3 rounded-md text-black font-bold text-lg hover:bg-[#F7AB0A]/40 hover:text-white cursor-pointer"
               }
             >
               Submit
